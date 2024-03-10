@@ -1,6 +1,7 @@
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
+import CropRotation from './Pages/CropRotation';
 import { createRoot } from 'react-dom/client';
 import { Auth0Provider } from '@auth0/auth0-react';
 
@@ -18,6 +19,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/CropRotation" element={<CropRotation />} />
           </Routes>
         </Router>
       </Auth0Provider>
