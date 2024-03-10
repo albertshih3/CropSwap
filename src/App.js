@@ -1,22 +1,21 @@
-import React from 'react'
-import Navbar from './Components/Navbar/Navbar'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './Pages/Home';
+// App.js
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Update Switch to Routes
+import Navbar from './Components/Navbar/Navbar';
 import CropRotation from './Pages/CropRotation';
+import Home from './Pages/Home';
 
 const App = () => {
   return (
-    <main className='column'>
-      <h1>Auth0 Login</h1>
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/CropRotation" element={<CropRotation />} />
-        </Routes>
-      </Router>
-    </main>
-  )
-}
+    <BrowserRouter>
+        <Navbar />
+      <Routes> {/* Change Switch to Routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/crop-rotation" element={<CropRotation />} />
+      </Routes>
 
-export default App
+    </BrowserRouter>
+  );
+};
+
+export default App;
