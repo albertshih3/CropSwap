@@ -30,4 +30,5 @@ app.post('/api/data', async (req, res) => {
   }
 });
 
+const port = process.env.PORT || 3001;
 app.listen(3001, () => console.log('Server running on port 3001'));
