@@ -34,11 +34,9 @@ async function getUserFromJoinTable(userID) {
 
 const CropRotation = () => {
   const { user, isAuthenticated } = useAuth0();
-  const { user, isAuthenticated } = useAuth0();
 
   const [selectedCrop, setSelectedCrop] = useState('');
   const [rotationHistory, setRotationHistory] = useState([]);
-  const [userData, setUserData] = useState(null);
   const [userData, setUserData] = useState(null);
 
   const handleCropChange = (event) => {
@@ -52,7 +50,6 @@ const CropRotation = () => {
   };
 
   const [userId, setUserId] = useState(null);
-  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -62,26 +59,7 @@ const CropRotation = () => {
         "collection": "users",
         "filter": {"email" : user.email}
       });
-  useEffect(() => {
-    if (isAuthenticated) {
-      let data = JSON.stringify({
-        "dataSource": "Data0",
-        "database": "userData",
-        "collection": "users",
-        "filter": {"email" : user.email}
-      });
 
-      let config = {
-        method: 'post',
-        maxBodyLength: Infinity,
-        url: 'http://localhost:3001/api/data',
-        headers: { 
-          'Content-Type': 'application/json',
-          'api-key': 'jMoBVq9SZJleC59mT6ifNYa6cyHw3UHWXiLEWwRfizWVvaWbV7TTFwRUL6wqPOT3', 
-          'Accept': 'application/json'
-        },
-        data : data
-      };
       let config = {
         method: 'post',
         maxBodyLength: Infinity,
@@ -103,27 +81,6 @@ const CropRotation = () => {
         });
     }
   }, [isAuthenticated, user.email]);
-      axios.request(config)
-        .then((response) => {
-          setUserId(response.data.documents[0].email);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  }, [isAuthenticated, user.email]);
-
-  useEffect(() => {
-    if (userId) {
-      getUserFromJoinTable(userId)
-        .then(data => {
-          setUserData(data);
-        })
-        .catch(error => {
-          console.error('Error fetching user data:', error);
-        });
-    }
-  }, [userId]);
 
   useEffect(() => {
     if (userId) {
