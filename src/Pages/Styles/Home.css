@@ -45,7 +45,7 @@
   }
   
   .crop-image {
-    width: 100%; /* Adjust as needed for the desired size */
+    width: 50%; /* Adjust as needed for the desired size */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
