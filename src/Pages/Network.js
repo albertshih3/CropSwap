@@ -77,7 +77,7 @@ const Network = () => {
               <p>Role: {profile.role}</p>
             </div>
             <button className='connectbtn' onClick={() => toggleConnection(index)}>
-              {connectedProfileIndex === index ? 'Disconnect' : 'Connect'}
+              {connectedProfileIndex === index ? 'Chatting..' : 'Chat'}
             </button>
             {connectedProfileIndex === index && (
               <div className="green-dot"></div>
@@ -100,7 +100,6 @@ const Network = () => {
               <div key={index} className={`chat-message ${msg.sender}`}>
                 {msg.sender === 'system' && <p className="system-message">{msg.text}</p>}
                 {msg.sender === 'user' && <p className="user-message">{msg.text}</p>}
-                {/* Add styling for messages from the other user if needed */}
               </div>
             ))}
           </div>
