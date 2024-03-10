@@ -16,8 +16,21 @@
 }
 
 .merged-crop-box .crop-item {
-    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    width: calc(33.33% - 45px); /* Adjust the width and margin as needed */
     margin-bottom: 10px;
+    margin-right: 25px; /* Set the right margin to 25px */
+}
+
+/* Adjust the width for season 1 and season 2 */
+.merged-crop-box .crop-item:nth-child(1),
+.merged-crop-box .crop-item:nth-child(2) {
+    width: calc(33.33% - 45px);
+}
+
+/* Adjust the width for season 4 and rest period */
+.merged-crop-box .crop-item:nth-child(4),
+.merged-crop-box .crop-item:nth-child(5) {
+    width: calc(33.33% - 45px);
 }
 
 .crop-item {
