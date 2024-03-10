@@ -120,9 +120,6 @@ const CropRotation = () => {
       {userData && (
         <Row className="mt-4">
           <Col className="text-center">
-            {/* <p>
-              The County you Selecte it: {userData.county}, The type of soil you have is: {userData.soil}, The weather condition in you county is: {userData.weather}
-            </p> */}
             <p>
               The County you Selected is: <span className="userData-text">{userData.county}</span>,
               The type of soil you have is: <span className="userData-text">{userData.soil}</span>,
