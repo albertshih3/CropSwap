@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
+import { useAuth0 } from "@auth0/auth0-react";
 import "./Navbar.css"
+
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+};
 
 const Navbar = () => {
     const [menu, setMenu]= useState("Home")
@@ -7,8 +14,8 @@ const Navbar = () => {
     <div className='navbar'>
         <ul className='nav-menu'>
             <li onClick={()=>{setMenu("Home")}}>Home{menu==="Home"?<h/>:<></>}</li>
-            <button>Login</button>
         </ul>
+        <LoginButton />
       
     </div>
   )
