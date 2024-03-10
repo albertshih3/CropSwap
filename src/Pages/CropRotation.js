@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useAuth0 } from "@auth0/auth0-react";
 import './Styles/CropRotation.css'; // Import the CSS file
 
-const SERVER_URL = process.env.REACT_APP_SERVER_URL || 'http://localhost:3001';
+const SERVER_URL = process.env.REACT_APP_VERCEL_URL || 'http://localhost:3001';
 
 async function getUserFromJoinTable(userID) {
   let data = JSON.stringify({
