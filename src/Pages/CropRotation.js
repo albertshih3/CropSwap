@@ -98,6 +98,7 @@ const CropRotation = () => {
     }
   }, [userId]);
 
+
   return (
     <Container className="mt-4">
       <Row>
@@ -116,7 +117,7 @@ const CropRotation = () => {
       </Row>
       {userData && (
         <Row className="mt-4">
-          <Col>
+          <Col className="text-center">
             <p>
               County: {userData.county}, Soil: {userData.soil}, Weather: {userData.weather}
             </p>
@@ -126,27 +127,27 @@ const CropRotation = () => {
                 <div key={season} className="crop-category">
                   <h2>Season {season}</h2>
                   <div className="merged-crop-box">
-                    {userData.crops
-                      .filter((crop) => crop.season === season)
-                      .map((crop, index) => (
-                        <div key={index} className="crop-item">
-                          <h3>Crop Name: {crop.crop_name}</h3>
-                        </div>
-                      ))}
+                    <div className="crop-item">
+                      {userData.crops
+                        .filter((crop) => crop.season === season)
+                        .map((crop, index) => (
+                          <h3 key={index}>{crop.crop_name}</h3>
+                        ))}
+                    </div>
                   </div>
                 </div>
               ))}
               <div className="crop-category">
                 <h2>Rest Period</h2>
                 <div className="merged-crop-box">
-                  {userData.crops
-                    .filter((crop) => crop.season !== 1 && crop.season !== 2 && crop.season !== 4)
-                    .map((crop, index) => (
-                      <div key={index} className="crop-item">
-                        <h3>Crop Name: {crop.crop_name}</h3>
-                        <p>Rest Period</p>
-                      </div>
-                    ))}
+                  <div className="crop-item">
+                    {userData.crops
+                      .filter((crop) => crop.season !== 1 && crop.season !== 2 && crop.season !== 4)
+                      .map((crop, index) => (
+                        <h3 key={index}>{crop.crop_name}</h3>
+                      ))}
+                    <p>Rest Period</p>
+                  </div>
                 </div>
               </div>
             </ul>
@@ -156,5 +157,4 @@ const CropRotation = () => {
     </Container>
   );
 };
-
 export default CropRotation;
