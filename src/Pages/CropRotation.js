@@ -26,6 +26,7 @@ async function getUserFromJoinTable(userID) {
 
   try {
     const response = await axios(config);
+    console.log(response.data.documents[0])
     return response.data.documents[0]; // Modify this line
   } catch (error) {
     console.error(error);
