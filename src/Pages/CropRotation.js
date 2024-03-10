@@ -1,7 +1,10 @@
+// CropRotation.js
+
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useAuth0 } from "@auth0/auth0-react";
+import './Styles/CropRotation.css'; // Import the CSS file
 
 async function getUserFromJoinTable(userID) {
   let data = JSON.stringify({
@@ -104,7 +107,6 @@ const CropRotation = () => {
       </Row>
       <Row className="mt-4">
         <Col>
-          {/* <h2>Rotation History</h2> */}
           <ul>
             {rotationHistory.map((crop, index) => (
               <li key={index}>{crop}</li>
@@ -115,18 +117,38 @@ const CropRotation = () => {
       {userData && (
         <Row className="mt-4">
           <Col>
-            {/* <h2>User Data</h2> */}
-            {/* <p>Email: {userData.email}</p> */}
-            <p>County: {userData.county}</p>
-            <p>Soil: {userData.soil}</p>
-            <p>Weather: {userData.weather}</p>
+            <p>
+              County: {userData.county}, Soil: {userData.soil}, Weather: {userData.weather}
+            </p>
             <p>Crops:</p>
-            <ul>
-              {userData.crops.map((crop, index) => (
-                <li key={index}>
-                  Crop Name: {crop.crop_name}, Season: {crop.season}, Weather: {crop.weather}, Soil Type: {crop.type_soil}
-                </li>
+            <ul className="crop-list">
+              {[1, 2, 4].map((season) => (
+                <div key={season} className="crop-category">
+                  <h2>Season {season}</h2>
+                  <div className="merged-crop-box">
+                    {userData.crops
+                      .filter((crop) => crop.season === season)
+                      .map((crop, index) => (
+                        <div key={index} className="crop-item">
+                          <h3>Crop Name: {crop.crop_name}</h3>
+                        </div>
+                      ))}
+                  </div>
+                </div>
               ))}
+              <div className="crop-category">
+                <h2>Rest Period</h2>
+                <div className="merged-crop-box">
+                  {userData.crops
+                    .filter((crop) => crop.season !== 1 && crop.season !== 2 && crop.season !== 4)
+                    .map((crop, index) => (
+                      <div key={index} className="crop-item">
+                        <h3>Crop Name: {crop.crop_name}</h3>
+                        <p>Rest Period</p>
+                      </div>
+                    ))}
+                </div>
+              </div>
             </ul>
           </Col>
         </Row>

@@ -1,0 +1,56 @@
+/* CropRotation.css */
+
+.crop-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.crop-category {
+    margin-top: 20px;
+}
+
+.merged-crop-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.merged-crop-box .crop-item {
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    margin-bottom: 10px;
+}
+
+.crop-item {
+    border: 1px solid #8B4513; /* Brown color for a soil-like appearance */
+    background-color: #D2B48C; /* Light brown background color */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.crop-item:nth-child(even) {
+    background-color: #f2d5ba; /* Darker brown for even items */
+}
+
+.crop-item h3 {
+    margin: 0;
+    color: #000000; /* Brown color for crop name */
+}
+
+.crop-item p {
+    margin: 5px 0;
+}
+
+/* Styling for the line containing location, soil, and weather */
+.container .row:nth-child(3) {
+    border-bottom: 2px solid #8B4513; /* Brown border for separation */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.container .row:nth-child(3) p {
+    font-size: 18px; /* Increase font size for a fancier appearance */
+    font-weight: bold;
+    color: #000000; /* Brown color for text */
+}
+
+/* Add any additional styles as needed */
