@@ -4,7 +4,7 @@ const LogoutButton = () => {
     const{logout, isAuthenticated} = useAuth0();
   return (
     isAuthenticated && (
-        <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+        <button onClick={() => logout({ logoutParams: { returnTo: 'https://psychic-bassoon.vercel.app' } })}>
         Log Out
       </button>
     )
