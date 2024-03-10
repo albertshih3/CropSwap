@@ -5,7 +5,7 @@ import "./Navbar.css"
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
-  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+  return <button className='button' onClick={() => loginWithRedirect()}>Log In</button>;
 };
 
 const Navbar = () => {

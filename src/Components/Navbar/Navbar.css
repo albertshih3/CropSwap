@@ -18,23 +18,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3pc;
     cursor: pointer;
+    margin-right: 50px;
 }
 
-.nav-menu button{
-    width: 57px;
+.button{
+    width: 100px;
     height: 58px;
     outline: none;
     border: 1px solid black;
-    border-radius: 75px;
+    border-radius: 45px;
     color: black;
     font-size: medium;
     font-weight: 500;
     background: white;
     cursor: pointer;
 }
-.nav-menu button:active{
+.button:active{
     background-color: blue;
 }
 
