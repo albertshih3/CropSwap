@@ -1,28 +1,53 @@
-.navbar{
+/* Navbar.css */
+
+.navbar {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     padding: 16px;
     box-shadow: 0 1px 3px black;
-}
-.nav-menu{
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Push the logo to the left */
+  }
+  
+  .logo {
+    width: 250px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    margin-right: 16px; /* Adjust the margin as needed */
+  }
+  
+  .nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 50px;
     color: black;
     font-size: medium;
-}
-
-.nav-menu li{
+  }
+  
+  .nav-menu li {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     margin-right: 50px;
-}
-
-.button{
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 50px;
+  }
+  
+  .button {
     width: 100px;
     height: 58px;
     outline: none;
@@ -33,16 +58,9 @@
     font-weight: 500;
     background: white;
     cursor: pointer;
-}
-.button:active{
+  }
+  
+  .button:active {
     background-color: blue;
-}
-
-/* .nav-menu hr{
-    border: none;
-    width: 80px;
-    height: 3px;
-    border-radius: 10px;
-    background-color: red;
-
-} */
+  }
+  

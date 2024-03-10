@@ -1,6 +1,70 @@
-.home{
-    /* display: flex; */
+/* Home.css */
+.home {
     text-align: center;
-    justify-content: center;
     padding: 16px;
-}
+  }
+  
+  .page-header {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header-overlay {
+    position: relative;
+  }
+  
+  .farm-image {
+    width: 100%; /* Adjust as needed */
+    max-height: 500px; /* Adjust the max height as needed */
+  }
+  
+  .overlay-text-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value for transparency */
+    border-radius: 8px;
+  }
+  
+  .overlay-text {
+    font-size: 150px; /* Adjust the font size for "Crop Rotation" */
+    color: #333;
+  }
+  
+  .content-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .crop-image-container {
+    flex: 1; /* Take up available space */
+    position: relative;
+    overflow: hidden; /* Ensure the image does not overflow its container */
+  }
+  
+  .crop-image {
+    width: 100%; /* Adjust as needed for the desired size */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px; /* Add margin to create a gap between "cr" image and text */
+  }
+  
+  h1 {
+    font-size: 50px; /* Adjust the font size for the heading */
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .content-text p {
+    font-size: 25px; /* Adjust the font size for the paragraph text */
+    line-height: 1.5;
+    color: #555;
+  }
+  

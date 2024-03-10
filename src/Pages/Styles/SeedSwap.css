@@ -1,0 +1,60 @@
+/* SeedSwap.css */
+.seed-swap-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.seed {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.seed:hover {
+  background-color: #f5f5f5;
+}
+
+.seed-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 2px solid #ddd;
+}
+
+.seed-details {
+  flex-grow: 1;
+}
+
+.swap-button {
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.swap-button:hover {
+  background-color: #4cae4c;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+

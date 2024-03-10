@@ -1,9 +1,10 @@
 // Navbar.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logo from './logo.JPG';
 
 const LoginButton = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
@@ -40,6 +41,9 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
+      <div className='logo-container'>
+        <img src={logo} alt='Logo' className='logo' />
+      </div>
       <ul className='nav-menu'>
         <li onClick={() => setMenu('Home')}>
           <Link to="/">Home</Link>
@@ -50,7 +54,18 @@ const Navbar = () => {
             <Link to="/crop-rotation">Crop Rotation</Link>
           </li>
         )}
+        {isAuthenticated && (
+          <li>
+            <Link to="/SeedSwap">Seed Swap</Link>
+          </li>
+        )}
+        {isAuthenticated && (
+          <li>
+            <Link to="/Network">Network</Link>
+          </li>
+        )}
       </ul>
+      <ul></ul>
       {isAuthenticated ? <LogoutButton /> : <LoginButton />}
     </div>
   );
