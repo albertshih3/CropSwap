@@ -6,6 +6,8 @@ import axios from 'axios';
 import { useAuth0 } from "@auth0/auth0-react";
 import './Styles/CropRotation.css'; // Import the CSS file
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL || 'http://localhost:3001';
+
 async function getUserFromJoinTable(userID) {
   let data = JSON.stringify({
     "dataSource": "Data0",
@@ -17,7 +19,7 @@ async function getUserFromJoinTable(userID) {
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'http://localhost:3001/api/data',
+    url: `${SERVER_URL}/api/data`,
     headers: { 
       'Content-Type': 'application/json', 
       'Access-Control-Allow-Origin': '*', 
@@ -67,7 +69,7 @@ const CropRotation = () => {
       let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: 'http://localhost:3001/api/data',
+        url: `${SERVER_URL}/api/data`,
         headers: { 
           'Content-Type': 'application/json',
           'api-key': 'jMoBVq9SZJleC59mT6ifNYa6cyHw3UHWXiLEWwRfizWVvaWbV7TTFwRUL6wqPOT3', 
