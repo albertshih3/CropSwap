@@ -120,10 +120,15 @@ const CropRotation = () => {
       {userData && (
         <Row className="mt-4">
           <Col className="text-center">
+            {/* <p>
+              The County you Selecte it: {userData.county}, The type of soil you have is: {userData.soil}, The weather condition in you county is: {userData.weather}
+            </p> */}
             <p>
-              County: {userData.county}, Soil: {userData.soil}, Weather: {userData.weather}
+              The County you Selected is: <span className="userData-text">{userData.county}</span>,
+              The type of soil you have is: <span className="userData-text">{userData.soil}</span>,
+              The weather condition in your county is: <span className="userData-text">{userData.weather}</span>
             </p>
-            <p>Crops:</p>
+            <p>According to the information you provide this are the crops we recommend you to pant according to season:</p>
             <ul className="crop-list">
               {[1, 2, 4].map((season) => (
                 <div key={season} className="crop-category">

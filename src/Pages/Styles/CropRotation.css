@@ -49,8 +49,11 @@
 
 .container .row:nth-child(3) p {
     font-size: 18px; /* Increase font size for a fancier appearance */
-    font-weight: bold;
     color: #000000; /* Brown color for text */
 }
 
+.userData-text {
+    color: #007bff; /* Change to the desired color for userData text */
+    font-weight: bold;
+}
 /* Add any additional styles as needed */
