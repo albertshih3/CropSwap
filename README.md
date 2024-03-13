@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# CropSwap
+An AgTech project created for HackMerced IX!
+**View our DevPost Submission Here:** [Devpost](https://devpost.com/software/cropswap)
+**Try our project:** [CropSwap Site](psychic-bassoon.vercel.app)
+*Our app requires user authentication. Since this is a demo for now, our authentication is not strict. You can use any email or password combo to access our app. Once you create an account, please remember your login information for future logins.*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+### :sparkles: **Winner of Best Use of Auth0** :sparkles:
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Inspiration
+We started off by identifying potential problems that local farmers could face that AgTech could help solve. What we found is that those just starting out had a hard time getting a grasp on the basic "science" of farming. We also found that connections between local farms and businesses was high on the priority list. This led us to develop CropSwap! Our goal is to create a guide that helps new farmers plan out potential crops as well as create new connections with their local community.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What does CropSwap do?
+CropSwap provides crop rotation guidance based on county-specific data, aiding farmers in optimizing their yields. This removes the need to do extensive research on what to plant and when to plant it. Additionally, it facilitates a seed exchange among farmers, ensuring that it is possible to access seeds without needing to spend a lot of money. Moreover, it acts as a platform connecting farmers with potential clients and fellow agriculturists.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How was it built?
+We developed CropSwap using React for the frontend and MongoDB for data storage. Authentication is managed through Auth0. We wanted to take time to learn new technologies which is why we chose the software suite that we did!
 
-### `npm test`
+## Challenges!
+One major challenge we had was learning how to use MongoDB as well as Auth0 and how to seamlessly connect it to our React front end. We wanted to take some time to learn new technologies, so we went into this challenge not knowing anything about MongoDB and Auth0. I am glad to say that after a lot of research (and one too many youtube guides), we were able to integrate all three platforms together and we learned a lot about the underlying technology along the way!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Acomplishments
+Learning MongoDB + Auth0! As we said above these were the hardest things for us as we came into this hackathon with no experience with these services. Being able to use them to create a fully functional web app is something that we are extremely proud of!
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What We Learned
+- Using MongoDB databases, collections, and documents
+- Auth0 implementation, including custom login screens, access management, and JS integration
+- Creating and hosting a serverless function to run as our backend to query MongoDB data.
